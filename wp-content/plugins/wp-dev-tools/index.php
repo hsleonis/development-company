@@ -7,8 +7,7 @@ Version: 1.0
 Author: Md. Hasan Shahriar
 Author URI: http://themeaxe.com
 License: GPL-v3
-*/
-/*
+
 Copyright 2016  Md. Hasan Shahriar  (email : hsleonis2@gmail.com)
 
 This program is paid software; you can not redistribute it and/or modify
