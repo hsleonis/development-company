@@ -1,0 +1,1414 @@
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+
+
+/* =========================================================================
+    Classify the main css
+    ========================================================================
+    *1. common style
+    *2. Main menu part
+    *3. slider part
+    *4. body-content
+
+*/
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   position: fixed;
+   display: block;
+   background-color: #000;
+   z-index: 9999;
+   text-align: center;
+}
+#loading span img{
+    top: 50%;
+}
+
+#loading-image {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+}
+
+/*  1.  common style*/
+.margin-top{
+    margin-top: 30px;
+}
+.remove-padding{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.display-none{
+    display: none !important;
+}
+/*  1.  End of common style*/
+
+
+
+/*  2.  Main menu part*/
+.always-visible{
+    z-index: 999;
+}
+.top-header{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.top-header-right{
+    z-index: 9;
+}
+.menu-right, .menu-right > p, .menu-bar, .menu-bar-border{
+    float: right;
+}
+.menu-right{
+    margin-top: 5px;
+}
+.menu-left{
+    display: none;
+}
+.menu-bar{
+    margin-top: 5px;
+}
+.menu-right > p{
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0 15px;
+    font-size: 20px;
+}
+.menu-bar-border{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    height: 25px;
+    margin: 0 10px;
+}
+.menu-bar-bg{
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    width: 25px;
+    margin-bottom: 5px;
+}
+.header-border-bottom{
+    border-bottom: 1px solid rgba(255,255,255, .3);
+    position: relative;
+    z-index: 999;
+}
+.search-panel{
+    float: right;
+    margin: 10px 0 0 0;
+}
+
+/*menu content*/
+.main-menu-content{         /*left-menu-content*/
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    display: none;
+}
+.main-menu-content-bg{
+    background: #000;
+}
+.menu-content-left-ul{
+    float: left;
+    padding: 0;
+    list-style: none;
+    margin-top: 15px;
+}
+.menu-content-left-ul li{
+    display: inline;
+    float: left;
+}
+.menu-content-left-ul li a{
+    text-decoration: none;
+    padding: 0 30px 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: left;
+}
+.menu-content-left-ul li:last-child a{
+    padding: 0;
+}
+.menu-content-left-ul a:hover{
+    color: #fefefe;
+    text-decoration: none;
+}                       /*left-menu-content*/
+
+
+.menu-content-right-ul{        /*right-menu-content*/
+    float: right;
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+}
+.menu-content-right-ul li{
+    display: inline;
+    float: right;
+}
+.menu-content-right-ul li a{
+    text-decoration: none;
+    padding: 0 0 0 30px;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-align: right;
+}
+.menu-content-right-ul li a:hover{
+    text-decoration: none;
+    color: #fefefe;
+}                       /*right-menu-content*/
+
+
+.menu-content-social-ul{        /*social-menu-content*/
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.menu-content-social-ul li{
+    padding: 0 0 0 30px;
+    display: inline;
+    float: right;
+}
+.menu-content-social-ul li a{
+    float: right;
+}
+.menu-content-social-ul li a:hover .display-none{
+    display: block !important;
+}
+.menu-content-social-ul li a:hover .display-block{
+    display: none !important;
+}                           /*social-menu-content*/
+
+
+/*end of menu-content*/
+
+/*  2.  End of Main menu part*/
+
+
+
+/*  3.  search-content*/
+.ddf{
+    display: none;
+    width: 100%!important;
+}
+.search-bg{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+}
+
+/*search-panel style*/
+#search {
+    z-index: 99;
+    padding: 0 30px;
+}
+
+#search h3 {
+    color: #00a551;
+    font-weight: 300;
+    float: left;
+    font-size: 18px;
+}
+
+#search .search-button-add{
+    float: right;
+    margin-top: 25px;
+    margin-right: -15px;
+}
+.search-left{
+    background: rgba(34, 45, 53, 0.9);
+}
+.search-right{
+    background: #222D35;
+}
+.blue-clr{color: #0384be}
+
+#search-form label {
+    color: #E4E5E6;
+    text-indent: 10px;
+    font-size: 12px;
+}
+
+
+#search-form select {cursor: pointer;}
+
+#search-form input,
+select {
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    padding: 0 10px;
+    border: solid 1px #333;
+    background-color: transparent;
+}
+
+#search-form input:focus,
+#search-form select:focus{border: 1px solid #bdbdbd}
+
+#search-form input:hover,
+#search-form select:hover{border: 1px solid #0093D9}
+
+#search-form select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    background: url(../img/drop-down-arrow.png) no-repeat 95% 45%;
+}
+
+#search-form input[type="submit"] {
+    background-color: #0093D9;
+    width: 90px;
+}
+
+
+
+#search-form input[type="submit"]:hover{background-color: #0384be}
+
+.border-right {
+    border-right: dashed 1px #333;
+}
+
+.nano > .nano-pane > .nano-slider {
+    background-color: #0094D9;
+}
+
+.list-ul {
+    list-style: none;
+    color: #fff;
+}
+
+
+.list-ul img {
+    float: left;
+    width: 60px;
+    margin-right: 15px;
+    height: 60px;
+}
+
+.list-ul li {
+    margin-bottom: 10px;
+    height: auto;
+    width: 100%;
+    float: left;
+}
+
+.list-ul li:hover {
+    background-color: #0094D9;
+}
+
+.list-ul li a {
+    text-decoration: none;
+}
+
+.list-ul p {
+    color: #fff;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.list-ul span {
+    color: rgba(255,255,255,0.3);
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
+.search-btn{
+    background: #0093D9 url(../img/right-arraw.png) no-repeat 90% 50%;
+    width: 90px;
+    height: 30px;
+    color: #fff;
+    font-size: 16px;
+    text-indent: -20px;
+    margin-top: 12px;
+    border: none;
+    font-weight: 700;
+}
+
+.search-btn:hover,
+.search-btn:focus,
+.search-btn:active{background-color: #0384be}
+/*end of search-panel style*/
+
+
+/*  End of search-content*/
+
+
+
+
+/*  3.  mobile-menu */
+.mobile-menu{
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    top: 0;
+    height: 100%;
+    display: none;
+}
+.height100{
+    height: 100%;
+}
+.mobile-menu-left{
+    height: 100%;
+    background: rgb(34, 45, 53);
+    padding: 70px 0 0;
+}
+.mobile-menu-right{
+    height: 100%;
+    background: rgba(34, 45, 53, .4);
+}
+.mobile-menu-ul{
+    padding: 0;
+    list-style: none;
+}
+.mobile-menu-ul li{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.mobile-menu-ul li a{
+    width: 100%;
+    float: left;
+    padding: 5px 0 5px 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+}
+.mobile-menu-ul li a:hover{
+    text-decoration: none;
+    color: #CFFCC2;
+}
+
+.mobile-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.mobile-menu-other-ul{
+    width: 100%;
+    float: left;
+    padding: 0 0 0 15px;
+}
+.mobile-menu-other-ul li{
+    width: 33.3%;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+.mobile-menu-other-ul li a{
+    float: left;
+    width: 100%;
+    color: #fff;
+    padding: 5px 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.mobile-menu-other-ul li a:hover{
+    text-decoration: none;
+    color: #CFFCC2;
+}
+.mobile-menu-social-ul{
+    width: 100%;
+    float: left;
+    padding: 0 0 0 15px;
+}
+.mobile-menu-social-ul li{
+    width: 25%;
+    float: left;
+    display: inline;
+    list-style: none;
+}
+.mobile-menu-social-ul a:hover .display-none{
+    display: block !important;
+}
+.mobile-menu-social-ul a:hover .display-block{
+    display: none !important;
+}
+
+
+/*  end of mobile-menu  */
+
+
+
+/*  3.  slider part*/
+.slider-body-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.main-slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.main-slider div{
+    width: 100%;
+    height: 100%;
+}
+.main-slider .slick-arrow{
+    display: none !important;
+}
+.main-slider-nav{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    right: 0px;
+}
+.main-slider-nav a{
+    float: left;
+}
+/*  3.  End of slider part*/
+
+
+/*  4.  body-content*/
+
+
+/*.body-content{
+    width: 100%;
+    top: 100px;
+    height: calc(100% - 100px);
+    position: absolute;
+}*/
+.projects-cat{
+    position: absolute;
+    width: 75%;
+    min-height: 75px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    list-style: none;
+    padding: 0;
+}
+.projects-cat li{
+    display: inline;
+    width: 33.33%;
+    min-height: 75px;
+    float: left;
+    border-top: 1px solid rgba(255,255,255, .4);
+}
+.projects-cat li:first-child{
+    border-right: 1px solid rgba(255,255,255, .4);
+}
+.projects-cat li:last-child{
+    border-left: 1px solid rgba(255,255,255, .4);
+}
+.projects-cat li a{
+    width: 100%;
+    height: 75px;
+    float: left;
+    text-align: center;
+    line-height: 75px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+}
+.projects-cat li a:hover{
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,0,0.30);
+}
+/*  4.  End of body-content*/
+
+
+/*==================about us page css==================*/
+
+
+
+.about-body-content{
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+}
+.about-main-wrapper{
+    height: 100%;
+}
+.about-left-bg{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: #152733;
+}
+.about-right-bg{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(34, 45, 53, 0.9);
+}
+.about-detail{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #152733;
+    padding-top: 100px;
+}
+.about-nav{
+    margin-top: 50px;
+    width: 100%;
+    float: left; 
+}
+.about-detail-sub{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #111F28;
+    padding-top: 100px;
+}
+.about-sub-content{
+    float: left;
+    width: 100%;
+    padding: 85px 15px 15px 15px;
+    text-align: left;
+    color: #45667f;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+.about-sub-img{
+    margin-bottom: 15px;
+}
+.about-sub-img img{
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.about-sub-img p{
+    text-align: center;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #45667f;
+}
+.about-nav-ul{
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255, .2);
+    margin-left: -10px;
+    width: 100%;
+    float: left;
+}
+.about-nav-ul li{
+    display: inline;
+    border-right: 1px solid rgba(255,255,255, .2);
+    width: 20%;
+    float: left;
+}
+.about-nav-ul li:last-child{
+    border-right: none;
+}
+.about-nav-ul a{
+    color: #005f7c;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100%;
+    float: left;
+    font-family: 'Raleway', sans-serif;
+}
+.about-nav-ul a:hover{
+    background: #13242E;
+    text-decoration: none;
+    color: #fff;
+}
+.about-nav-ul a:focus, .about-nav-ul a:active{
+    text-decoration: none;
+    outline: none;
+    color: #005f7c;
+    background: #13242E;
+    cursor: none;
+}
+.about-nav-tab{
+    height: 100%;
+}
+.about-nav-content{
+    height: 300px;
+    float: left;
+    padding: 10px 20px 10px 0;
+}
+.about-nav-content p{
+    font-size: 15px;
+    color: #45667f;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+
+/*===============end of about us page===========================*/
+
+
+
+/*=============== project specification=====================*/
+
+
+.specification-body-content{
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+}
+.spec-left-bg{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 20%;
+    background: #222d3a;
+}
+.spec-left-wrapper{
+    background: #222d3a;
+    height: 100%;
+    overflow: hidden;
+}
+.spec-project-cat{
+    width: 100%;
+    float: left;
+    padding-top: 99px;
+}
+.spec-project-cat-ul{
+    float: left;
+    width: 100%;
+    padding: 0px;
+    list-style: outside none none;
+    margin: 0px;
+}
+.spec-project-cat-ul li{
+    text-align: center;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.spec-project-cat-ul li:last-child{
+    border-right: none;
+}
+.spec-project-cat-ul a{
+    width: 100%;
+    float: left;
+    padding: 20px 0px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+}
+.spec-project-cat-ul a:hover{
+    text-decoration: none;
+    background: #222934;
+    color: #fff;
+}
+.spec-project-detail{
+    width: 100%;
+    float: left;
+    padding-top: 10px;
+}
+.spec-project-nav{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 15px;
+}
+.spec-project-nav h3{
+    margin: 10px 0;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+.spec-project-nav a{
+    float: left;
+}
+.spec-project-nav a:hover{
+    background: rgba(23, 55, 255, .8);
+}
+.spec-info{
+    width: 100%;
+    float: left;
+    height: 100%;
+    padding: 40px 20px 0px 0px;
+}
+.spec-info .table td{
+    border: none;
+    padding: 0;
+    line-height: 25px;
+    color: #45667f;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.spec-right-wrapper{
+    height: 100%;
+    overflow: hidden;
+    padding: 98px 0 0 0;
+}
+.spec-project-tab{
+    float: right;
+    width: 100%;
+}
+.spec-project-tab-ul{
+    width: 100%;
+    float: right;
+    list-style: none;
+    padding: 0;
+}
+.spec-project-tab-ul li{
+    float: right;
+}
+.spec-project-tab-ul a{
+    text-align: left;
+    width: 100%;
+    float: left;
+    line-height: 40px;
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+.spec-project-tab-ul a:hover, .spec-project-tab-ul a:focus{
+    text-decoration: none;
+    background: rgba(0, 0, 0, .3);
+    color: #fff;
+    outline: none;
+}
+.spec-project-tab-ul i{
+    float: left;
+}
+
+.spec-project-tab-ul a:hover .display-none{
+    display: block !important;
+}
+.spec-project-tab-ul a:hover .display-block{
+    display: none !important;
+}
+
+.project-list-img {
+    height: 400px;
+    width: 100%;
+    background-color: darkslategray;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+/*=============== end of project specification===============*/
+
+
+/*===============Projects detail page======================*/
+
+
+.project-detail-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(34,45,58, .8);
+    padding-top: 98px;
+}
+.ssd{
+    border: 1px solid red;
+}
+.project-detail-left{
+    padding: 30px 0 0 0;
+    text-align: left;
+}
+.project-detail-left h1{
+    font-size: 120px;
+    color: #fff;
+    margin: 0;
+}
+.project-detail-left p{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+.project-detail-left span{
+    font-weight: 400;
+}
+.project-detail-nav{
+    float: left;
+    width: 65px;
+    padding: 30px 0 0 0;
+}
+.project-detail-nav a{
+    float: left;
+}
+.project-detail-right{
+    height: 100%;
+}
+.project-detail{
+    padding: 30px 0 0 0;
+    height: 100%;
+}
+.project-detail a:hover{
+    text-decoration: none;
+}
+.project-detail div{
+    overflow: hidden;
+}
+.project-detail img{
+    width: 100%;
+}
+.project-detail h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+.project-detail p{
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.project-detail button{
+    display: none !important;
+}
+
+/*=============== End of projects detail page==============*/
+
+
+
+/*===============Gallery page========================*/
+
+
+.gallery-body-content{
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+}
+.gallery-slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.gallery-slider div{
+    padding-right: 0px;
+    padding-left: 0px;
+    height: 100%;
+}
+.gallery-slider h4{
+    color: #fff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+}
+.gallery-slider p{
+    position: absolute;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    bottom: 0;
+    right: 30px;
+}
+.gallery-slider a{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.gallery-slider a:focus{
+    outline: none;
+}
+.gallery-slider button{
+    display: none !important;
+}
+
+.gallery-spec-tab{
+    position: absolute;
+    top: 98px;
+    width: 100%;
+    height: 50px;
+}
+/*.gallery-slider img{
+    width: 100%;
+}*/
+
+
+/*===============End of gallery page=================*/
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+@media screen and (max-width: 1200px){
+/*.projects-cat{
+    width: 100%;
+    }*/
+}
+@media screen and (max-width: 992px){
+    .menu-content-right-ul{
+        float: left;
+    }
+    .menu-content-right-ul li a{
+        padding: 0 30px 0 0;
+    }
+    .menu-content-social-ul{
+        float: right;
+    }
+    .menu-content-social-ul li{
+        padding: 0 0 0 30px;
+    }
+    /*specification page*/
+    .spec-project-tab-ul{
+        float: left;
+        width: 50%;
+    }
+    /*end of specification page*/
+}
+@media screen and (max-width: 768px){
+    .menu-content-left-ul li a{
+        padding: 0 10px 0 0;
+        font-size: 13px;
+    }
+    .menu-content-right-ul li a{
+        padding: 0 20px 0 0;
+        font-size: 13px;
+    }
+    .margin-top{
+        margin-top: 15px;
+    }
+    .projects-cat{
+        width: 100%;
+        min-height: 50px;
+    }
+    .projects-cat li{
+        min-height: 50px;
+    }
+    .projects-cat li a{
+        height: 50px;
+        line-height: 50px;
+    }
+    /*about page*/
+
+    .about-detail{
+        padding-top: 60px;
+    }
+    .about-nav-ul li{
+        width: 75px;
+    }
+
+    /*end of about page*/
+
+    /*specification page*/
+    .spec-project-cat {
+        padding-top: 68px;
+    }
+    .spec-right-wrapper{
+        padding: 68px 0 0 0;
+    }
+    .spec-project-tab-ul{
+        width: 75%;
+    }
+    /*end of specification page*/
+
+
+    /*Project-detail page*/
+
+
+    .project-detail-body{
+        padding-top: 68px;
+    }
+
+
+    /*End of project-detail page*/
+
+
+
+}
+
+@media screen and (max-width: 480px){
+    .main-menu-content{
+        display: none;
+    }
+    #search-form p:nth-child(n+2){
+        display: none;
+    }
+    #search-form p:last-child{
+        display: block;
+    }
+    .menu-left{
+        display: block;
+        float: left;
+        margin: 5px 15px 0 0;
+    }
+    .menu-right{
+        display: none;
+    }
+    .logo img{
+        width: 110px;
+    }
+
+    .about-width{
+        width: 100% !important;
+    }
+    .dis-none{
+        display: none;
+    }
+    .about-right-bg{
+        background: rgb(21, 39, 51);
+    }/*
+    .about-nav-ul a{
+        font-size: 13px;
+    }*/
+
+    /*specification page*/
+    .spec-left-wrapper{
+        min-width: 240px;
+    }
+    .spec-project-cat {
+        padding-top: 62px;
+    }
+    .spec-project-cat-ul{
+        width: 100%;
+        float: left;
+    }
+    .spec-project-cat-ul a{
+        font-size: 12px;
+    }
+    .spec-right-wrapper{
+        padding: 61px 0 0 0;
+        width: 50px !important;
+        float: left !important;
+    }
+    .spec-project-tab-ul{
+        width: 100%;
+    }
+    .spec-project-tab-ul a{
+        padding: 0 0 0 3px;
+    }
+    .spec-project-tab-ul li{
+        width: 100%;
+        float: left;
+    }
+    .spec-project-tab-ul a span{
+        display: none;
+    }
+    /*end of specification page*/
+
+
+
+    /*Project-detail page*/
+
+
+    .project-detail-body{
+        padding-top: 60px;
+    }
+    .col-xss-6{
+        width: 50% !important;
+    }
+    .project-detail-left h1{
+        font-size: 100px;
+    }
+    .project-detail-left p{
+        font-size: 12px;
+    }
+
+    /*End of project-detail page*/
+
+}
