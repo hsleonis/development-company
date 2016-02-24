@@ -98,12 +98,6 @@ textarea {
 
 
 
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -203,6 +197,8 @@ html, body{
     width: 100%;
     height: 100%;
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    margin-top:0 !important;
+    overflow: hidden;
 }
 #loading {
    width: 100%;
@@ -217,11 +213,13 @@ html, body{
 }
 #loading span img{
     top: 50%;
+    left: 40%;
 }
 
 #loading-image {
   position: absolute;
   top: 50%;
+  left: 40%;
   z-index: 100;
 }
 
@@ -296,6 +294,7 @@ html, body{
     position: relative;
     z-index: 999;
     display: none;
+    background-color: rgba(0,0,0,.3);
 }
 .main-menu-content-bg{
     background: #000;
@@ -651,10 +650,11 @@ select {
     display: none !important;
 }
 .main-slider-nav{
-    width: 100%;
+    width: 62px;
     position: absolute;
     bottom: 50px;
     right: 0px;
+    display: none;
 }
 .main-slider-nav a{
     float: left;
@@ -934,6 +934,8 @@ select {
     float: left;
     height: 100%;
     padding: 40px 20px 0px 0px;
+    color: #476A7F;
+    font-size: 12px;
 }
 .spec-info .table td{
     border: none;
@@ -959,8 +961,26 @@ select {
     padding: 0;
 }
 .spec-project-tab-ul li{
-    float: right;
+    float: left;
 }
+.nav > li > a{line-height: 40px;}
+
+.nav-tabs{border-color:transparent}
+.nav > li > a:focus,
+.nav > li > a:hover,
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color:transparent;
+    border-color: transparent;
+    border-radius:0;
+    color: #ffffff;
+}
+.nav > li > a:hover,
+.nav > li > a:active{background-color:rgba(0,0,0,.25)}
+
+.spec-project-tab-ul li:nth-child(2) a{padding-right: 0}
+.spec-project-tab-ul li:last-child a{padding-right: 0}
 .spec-project-tab-ul a{
     text-align: left;
     width: 100%;
@@ -973,7 +993,6 @@ select {
 }
 .spec-project-tab-ul a:hover, .spec-project-tab-ul a:focus{
     text-decoration: none;
-    background: rgba(0, 0, 0, .3);
     color: #fff;
     outline: none;
 }
@@ -1029,9 +1048,19 @@ select {
     font-size: 13px;
     font-weight: 700;
     font-family: 'Raleway', sans-serif;
+    display: inline;
 }
+
+.project-detail-left p:first-child{
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.project-detail-left p:last-child{}
+
 .project-detail-left span{
     font-weight: 400;
+    margin-left: 5px;
 }
 .project-detail-nav{
     float: left;
@@ -1059,16 +1088,18 @@ select {
 }
 .project-detail h4{
     color: #fff;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 700;
+    font-size: 13px;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
+    margin-bottom: 5px;
 }
 .project-detail p{
     color: #fff;
     font-family: 'Raleway', sans-serif;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 12px;
+    font-width:700;
 }
 .project-detail button{
     display: none !important;
@@ -1408,6 +1439,8 @@ select {
     .project-detail-left p{
         font-size: 12px;
     }
+
+
 
     /*End of project-detail page*/
 

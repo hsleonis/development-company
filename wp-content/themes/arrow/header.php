@@ -11,7 +11,6 @@
 </head>
 <body>
 <div id="loading">
-    <span><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></span>
   <img id="loading-image" src="<?php echo get_template_directory_uri(); ?>/resources/img/715.GIF" alt="Loading..." />
 </div>
     <section id="header" class="top-header">
