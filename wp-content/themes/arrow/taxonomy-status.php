@@ -14,7 +14,7 @@
                     <h1><?php echo count($post); ?></h1>
                     <p>
                         <?php echo get_query_var('term'); ?>
-                        <span><?php the_archive_description( '', '' ); ?></span>
+                        <span>Projects</span>
                     </p>
                 </div>
                 <div class="project-detail-nav">
