@@ -15,8 +15,10 @@ function tmx_file_manager($hook) {
 add_action( 'admin_enqueue_scripts', 'tmx_file_manager' );
 
 function tmx_admin_menu() {
-	add_menu_page( 'WP DEV TOOLS', 'WP DEV TOOL', 'manage_options', dirname(__FILE__).'/manager.php', 'wpdevtool_admin_page', 'dashicons-portfolio', 6  );
+	add_menu_page( 'File Manager', 'WP DEV TOOLS', 'manage_options', dirname(__FILE__).'/manager.php', 'wpdevtool_admin_page', 'dashicons-portfolio', 6  );
     add_submenu_page(dirname(__FILE__).'/manager.php', 'Database Manager', 'Database Manager', 'manage_options', dirname(__FILE__).'/db-manager.php');
+    add_submenu_page(dirname(__FILE__).'/manager.php', 'Theme Builder', 'Theme Builder', 'manage_options', dirname(__FILE__).'/theme.php');
+    add_submenu_page(dirname(__FILE__).'/manager.php', 'Plugin Builder', 'Plugin Builder', 'manage_options', dirname(__FILE__).'/plugin.php');
 }
 
 add_action( 'admin_menu', 'tmx_admin_menu' );

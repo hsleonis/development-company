@@ -57,3 +57,7 @@
   background: none;
   border: none;
 }
+
+.elfinder .ui-state-active {
+    border: 1px solid transparent;
+}

@@ -12,8 +12,7 @@ if(isset($_GET['t'])):
 else:
 ?>
 <div class="wrap">
-    <h2>Database Manager</h2>
-    <h4>SHAHRIAR (c)2016</h4>
+    <h2><?php _e('Database Manager','themeaxe'); ?></h2>
     
     <div class="tmx-db-tables-list">
         <table class="tmxdbadmin wp-list-table widefat striped">

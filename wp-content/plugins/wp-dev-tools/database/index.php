@@ -7,7 +7,7 @@ function tmx_db_scripts($hook) {
     wp_enqueue_style('data-table-css', plugin_dir_url(__FILE__).'db.css', false, '1.0.0');
     
     wp_enqueue_script('jquery');
-    wp_enqueue_script( 'data-tables', plugin_dir_url( __FILE__ ) . 'jquery.dataTables.min.js' );
+    wp_enqueue_script( 'dynatable', plugin_dir_url( __FILE__ ) . 'dynatable.js' );
     
     add_action('admin_footer', 'tmx_dbadmin_footer');
     }

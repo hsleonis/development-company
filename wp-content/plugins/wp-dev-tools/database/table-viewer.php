@@ -1,7 +1,6 @@
 <div class="wrap">
-    <h2>Database Manager | Table viewer</h2>
-    <h4>SHAHRIAR (c)2016</h4>
-    <h4><?php _e('Table: ','themeaxe'); ?><?php echo $table_name; ?></h4>
+    <h2><?php _e('Table viewer','themeaxe'); ?></h2>
+    <h3><?php echo $table_name; ?></h3>
     <?php
         global $wpdb;
         $head = "SHOW COLUMNS FROM ".$table_name;

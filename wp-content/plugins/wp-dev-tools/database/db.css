@@ -9,7 +9,7 @@
  * Date: Tue Jan 02 2014
  */
 .tmx-db-tables-list,.tmx-db-data-list {
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 th a {
     color: #000;
@@ -59,7 +59,6 @@ th a:hover {
 
 .dynatable-active-page {
   background: #71AF5A;
-  border-radius: 5px;
   color: #fff;
 }
 .dynatable-active-page:hover {

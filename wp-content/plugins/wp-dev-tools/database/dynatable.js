@@ -127,7 +127,7 @@
       dynatable: 'dynatable',
       queries: 'queries',
       sorts: 'sorts',
-      page: 'page',
+      page: 'sub',
       perPage: 'perPage',
       offset: 'offset',
       records: 'records',
@@ -1561,13 +1561,13 @@
           // because if the feature is turned off, then parameter name is a coincidence and it's unrelated to dynatable.
           if (
             (!settings.features.sort && attr == "sorts") ||
-              (!settings.features.paginate && _this.anyMatch(attr, ["page", "perPage", "offset"], function(attr, param) { return attr == param; }))
+              (!settings.features.paginate && _this.anyMatch(attr, ["sub", "perPage", "offset"], function(attr, param) { return attr == param; }))
           ) {
             continue;
           }
 
           // Delete page and offset from url params if on page 1 (default)
-          if ((attr === "page" || attr === "offset") && data["page"] === 1) {
+          if ((attr === "sub" || attr === "offset") && data["sub"] === 1) {
             if (urlOptions[label]) {
               delete urlOptions[label];
             }
