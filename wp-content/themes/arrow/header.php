@@ -9,7 +9,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <div id="loading">
   <img id="loading-image" src="<?php echo get_template_directory_uri(); ?>/resources/img/715.GIF" alt="Loading..." />
 </div>
@@ -124,5 +124,3 @@
         <!-- end of mobile menu -->
 
     </section>
-
-<?php get_template_part('content-slider'); ?>

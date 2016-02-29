@@ -33,3 +33,16 @@
             }
         }
     }
+
+add_action( 'add_meta_boxes', 'tmx_mb_taxonomy_walkers' );
+function tmx_mb_taxonomy_walkers( $post_type ) {
+    remove_meta_box( 'statusdiv', 'projects', 'side' );
+    remove_meta_box( 'citydiv', 'projects', 'side' );
+    remove_meta_box( 'sizediv', 'projects', 'side' );
+}
+
+add_action('do_meta_boxes', 'change_image_metabox' );
+function change_image_metabox(){
+    remove_meta_box( 'postimagediv', 'projects', 'side' );
+    add_meta_box('postimagediv', __('Featured Image'), 'post_thumbnail_meta_box', 'projects', 'side', 'high');
+}

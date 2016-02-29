@@ -35,7 +35,7 @@ function project_themeaxe() {
 		'label'                 => __( 'Project', 'themeaxe' ),
 		'description'           => __( 'Projects Information', 'themeaxe' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'excerpt', ),
+		'supports'              => array( 'title', 'editor', 'thumbnail', ),
 		'taxonomies'            => array( 'status' ),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -98,5 +98,90 @@ function status_themeaxe() {
 
 }
 add_action( 'init', 'status_themeaxe', 0 );
+}
+    
+if ( ! function_exists( 'city_themeaxe' ) ) {
+
+// Register Custom Taxonomy
+function city_themeaxe() {
+
+	$labels = array(
+		'name'                       => _x( 'All city', 'Taxonomy General Name', 'themeaxe' ),
+		'singular_name'              => _x( 'City', 'Taxonomy Singular Name', 'themeaxe' ),
+		'menu_name'                  => __( 'City', 'themeaxe' ),
+		'all_items'                  => __( 'All city', 'themeaxe' ),
+		'parent_item'                => __( 'Parent city', 'themeaxe' ),
+		'parent_item_colon'          => __( 'Parent city:', 'themeaxe' ),
+		'new_item_name'              => __( 'New city Name', 'themeaxe' ),
+		'add_new_item'               => __( 'Add New city', 'themeaxe' ),
+		'edit_item'                  => __( 'Edit city', 'themeaxe' ),
+		'update_item'                => __( 'Update city', 'themeaxe' ),
+		'view_item'                  => __( 'View city', 'themeaxe' ),
+		'separate_items_with_commas' => __( 'Separate each city with commas', 'themeaxe' ),
+		'add_or_remove_items'        => __( 'Add or remove city', 'themeaxe' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'themeaxe' ),
+		'popular_items'              => __( 'Popular city', 'themeaxe' ),
+		'search_items'               => __( 'Search citys', 'themeaxe' ),
+		'not_found'                  => __( 'Not Found', 'themeaxe' ),
+		'no_terms'                   => __( 'No items', 'themeaxe' ),
+		'items_list'                 => __( 'City list', 'themeaxe' ),
+		'items_list_navigation'      => __( 'City list navigation', 'themeaxe' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'city', array( 'projects' ), $args );
+
+}
+add_action( 'init', 'city_themeaxe', 0 );
+
+}
+
+if ( ! function_exists( 'size_themeaxe' ) ) {
+
+// Register Custom Taxonomy
+function size_themeaxe() {
+
+	$labels = array(
+		'name'                       => _x( 'All size', 'Taxonomy General Name', 'themeaxe' ),
+		'singular_name'              => _x( 'Size', 'Taxonomy Singular Name', 'themeaxe' ),
+		'menu_name'                  => __( 'Size', 'themeaxe' ),
+		'all_items'                  => __( 'All size', 'themeaxe' ),
+		'parent_item'                => __( 'Parent size', 'themeaxe' ),
+		'parent_item_colon'          => __( 'Parent size:', 'themeaxe' ),
+		'new_item_name'              => __( 'New size Name', 'themeaxe' ),
+		'add_new_item'               => __( 'Add New size', 'Shemeaxe' ),
+		'edit_item'                  => __( 'Edit size', 'themeaxe' ),
+		'update_item'                => __( 'Update size', 'themeaxe' ),
+		'view_item'                  => __( 'View size', 'themeaxe' ),
+		'separate_items_with_commas' => __( 'Separate each size with commas', 'themeaxe' ),
+		'add_or_remove_items'        => __( 'Add or remove size', 'themeaxe' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'themeaxe' ),
+		'popular_items'              => __( 'Popular size', 'themeaxe' ),
+		'search_items'               => __( 'Search sizes', 'themeaxe' ),
+		'not_found'                  => __( 'Not Found', 'themeaxe' ),
+		'no_terms'                   => __( 'No items', 'themeaxe' ),
+		'items_list'                 => __( 'Size list', 'themeaxe' ),
+		'items_list_navigation'      => __( 'Size list navigation', 'themeaxe' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'size', array( 'projects' ), $args );
+
+}
+add_action( 'init', 'size_themeaxe', 0 );
 
 }

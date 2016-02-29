@@ -2,6 +2,22 @@
     'use strict';
     
     jQuery( document ).ready(function($) {
+        function hidePanel(m) {
+            $(m).animate({
+                'z-index' : '0',
+                'opacity' : '0'
+            }, 500);
+        }
+        
+        function showPanel(el, m) {
+            $(el).animate({
+                'z-index' : '2',
+                'opacity' : '1'
+            }, 500, function(){
+                hidePanel(m);
+            });
+        }
+        
         $(".menu-button-add").on('click', function() {
         $(".main-menu-content").slideToggle();
         $(".projects-cat").toggle();
@@ -59,12 +75,24 @@
 
         $('.gallery-slider').slick({
           dots: false,
-          infinite: true,
-          speed: 300,
+          speed: 2000,
           autoplay: true,
           autoplaySpeed: 4000,
           slidesToShow: 2,
-          adaptiveHeight: true
+          lazyLoad: 'ondemand',
+          adaptiveHeight: true,
+          pauseOnHover: false
+    });
+        
+        $('.plan-slider').slick({
+          dots: false,
+          speed: 2000,
+          autoplay: true,
+          autoplaySpeed: 4000,
+          lazyLoad: 'ondemand',
+          slidesToShow: 2,
+          adaptiveHeight: true,
+          pauseOnHover: false
     });
 
         $('.main-slider').slick({
@@ -78,13 +106,41 @@
           nextArrow: $('.main-slider-next'),
           pauseOnHover: false
     });
+        
+        $(document).on('click','.plan-btn',function(){
+            $('.spec-project-tab-ul .active').removeClass('active');
+            $(this).addClass('active');
+            showPanel('#project-plan','#project-gallery, .specification-body-content');
+        });
+        
+        $(document).on('click','.gallery-btn',function(){
+            $('.spec-project-tab-ul .active').removeClass('active');
+            $(this).addClass('active');
+            showPanel('#project-gallery','#project-plan, .specification-body-content');
+        });
+        
+        $(document).on('click','.glance-btn, .spec-btn',function(){
+            $('.spec-project-tab-ul .active').removeClass('active');
+            $('.specification-body-content').animate({
+                'opacity' : '1'
+            }, 500, function(){
+                hidePanel('#project-gallery, #project-plan');
+            });
+        });
 
-        $('#gallery-slider').lightGallery({
+        $('.gallery-slider').lightGallery({
             thumbnail:true,
             animateThumb: false,
             showThumbByDefault: false,
             selector: '.col-md-6'
     });
+        
+        $('.plan-slider').lightGallery({
+            thumbnail:true,
+            animateThumb: false,
+            showThumbByDefault: false,
+            selector: '.col-md-6'
+        });
 
         $(window).load(function() {
             $('#loading').hide();

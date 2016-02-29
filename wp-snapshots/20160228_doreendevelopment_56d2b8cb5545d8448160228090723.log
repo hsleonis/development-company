@@ -1,0 +1,75 @@
+********************************************************************************
+PACKAGE-LOG: 2016-02-28 09:07:28
+NOTICE: Do NOT post to public sites or forums 
+********************************************************************************
+VERSION:	1.1.4
+WORDPRESS:	4.4.2
+PHP INFO:	5.6.12 | SAPI: apache2handler
+SERVER:		Apache/2.4.16 (Unix) OpenSSL/1.0.1p PHP/5.6.12 mod_perl/2.0.8-dev Perl/v5.16.3 
+PHP TIME LIMIT: (0) no time limit imposed 
+PHP MAX MEMORY: 5000M (128M default) 
+MEMORY STACK: 18.75MB 
+
+********************************************************************************
+DATABASE:
+********************************************************************************
+BUILD MODE:   PHP(query limit - 100)
+MYSQLTIMEOUT: 5000
+MYSQLDUMP:    Not Supported 
+TABLES: total:17 | filtered:0 | create:17 
+FILTERED: [] 
+SQL CREATED: 20160228_doreendevelopment_56d2b8cb5545d8448160228090723_database.sql 
+SQL FILE SIZE: 601.63KB (616065) 
+SQL FILE TIME: 2016-02-28 09:07:28 
+SQL RUNTIME: 0.10 sec. 
+
+******************************************************************************** 
+ARCHIVE (ZIP): 
+******************************************************************************** 
+ARCHIVE DIR:  /opt/lampp/htdocs/doreendev 
+ARCHIVE FILE: 20160228_doreendevelopment_56d2b8cb5545d8448160228090723_archive.zip 
+FILTERS: *OFF* 
+DIRS:  not set 
+EXTS:  not set 
+---------------------------------------- 
+COMPRESSING 
+SIZE:	64.03MB 
+STATS:	Dirs 440 | Files 4,232 
+SQL ADDED: 20160228_doreendevelopment_56d2b8cb5545d8448160228090723_database.sql 
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 4672
+    [filename] => /opt/lampp/htdocs/doreendev/wp-snapshots/tmp/20160228_doreendevelopment_56d2b8cb5545d8448160228090723_archive.zip
+    [comment] => 
+)
+ 
+COMPRESSION RESULT: '1' 
+COMPRESSED SIZE: 48.35MB 
+ARCHIVE RUNTIME: 16.43 sec. 
+MEMORY STACK: 20.5MB 
+
+******************************************************************************** 
+MAKE INSTALLER: 
+******************************************************************************** 
+Build Start 
+Build Finished 
+Preping for use 
+Template parsed with new data 
+Complete [/opt/lampp/htdocs/doreendev/wp-snapshots/tmp/20160228_doreendevelopment_56d2b8cb5545d8448160228090723_installer.php] 
+Added to archive 
+
+******************************************************************************** 
+INTEGRITY CHECKS: 
+******************************************************************************** 
+SQL File: 601.63KB 
+Installer File: 318.87KB 
+Archive File: 48.35MB  
+
+********************************************************************************
+RECORD ID:[1]
+TOTAL PROCESS RUNTIME: 17.41 sec.
+PEAK PHP MEMORY USED: 22.5MB
+DONE PROCESSING => 20160228_doreendevelopment 2016-02-28 09:07:45
+ 

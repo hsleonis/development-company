@@ -2,7 +2,6 @@
     <div id="search-ddf" class="search-bg ddf">
         <div class="container-fluid height100">
             <div class="row height100">
-                <div class="col-md-6 col-sm-6 col-xs-4 height100 search-left always-visible"></div>
                 <!-- Search container-->
                 <div class="col-md-6 col-sm-6 col-xs-8 height100 search-right always-visible remove-padding">
                     <div id="search">
@@ -30,9 +29,27 @@
                                         <label for="name">BY CATEGORY</label>
                                         <select data-ng-model="searchCat">
                                             <option value=""></option>
-                                            <option value="ongoing">Ongoing</option>
-                                            <option value="upcoming">Upcoming</option>
-                                            <option value="completed">Completed</option>
+                                            <?php
+                                                $args = array( 'hide_empty=0' );
+
+                                                $terms = get_terms( 'status', $args );
+                                                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                                                    $count = count( $terms );
+                                                    $i = 0;
+                                                    $term_list = '';
+                                                    foreach ( $terms as $term ) {
+                                                        $i++;
+                                                        $term_list .= '<option value="' . $term->name . '">'. $term->name .'</option>';
+                                                        if ( $count != $i ) {
+                                                            $term_list .= '';
+                                                        }
+                                                        else {
+                                                            $term_list .= '';
+                                                        }
+                                                    }
+                                                    echo $term_list;
+                                                }
+                                            ?>
                                         </select>
                                     </p>
 
@@ -40,22 +57,27 @@
                                         <label for="name">BY CITY</label>
                                         <select data-ng-model="searchCity">
                                             <option value=""></option>
-                                            <option value="Dhaka">Dhaka</option>
-                                            <option value="Chittagong">Chittagong</option>
-                                            <option value="Shylet">Shylet</option>
-                                            <option value="Rajshahi">Rajshahi</option>
-                                        </select>
-                                    </p>
+                                            <?php
+                                                $args = array( 'hide_empty=0' );
 
-                                    <p>
-                                        <label for="name">BY ZONE</label>
-                                        <select data-ng-model="searchZone">
-                                            <option value=""></option>
-                                            <option value="Gulshan">Gulshan</option>
-                                            <option value="Banani">Banani</option>
-                                            <option value="Khulshi">Khulshi, Chittagong</option>
-                                            <option value="Uttara">Uttara</option>
-                                            Dhanmondi
+                                                $terms = get_terms( 'city', $args );
+                                                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                                                    $count = count( $terms );
+                                                    $i = 0;
+                                                    $term_list = '';
+                                                    foreach ( $terms as $term ) {
+                                                        $i++;
+                                                        $term_list .= '<option value="' . $term->name . '">'. $term->name .'</option>';
+                                                        if ( $count != $i ) {
+                                                            $term_list .= '';
+                                                        }
+                                                        else {
+                                                            $term_list .= '';
+                                                        }
+                                                    }
+                                                    echo $term_list;
+                                                }
+                                            ?>
                                         </select>
                                     </p>
 
@@ -63,10 +85,27 @@
                                         <label for="name">BY SIZE (IN SFT)</label>
                                         <select data-ng-model="searchSize">
                                             <option value=""></option>
-                                            <option value="">300</option>
-                                            <option value="">500</option>
-                                            <option value="">1200</option>
-                                            <option value="">1500</option>
+                                            <?php
+                                                $args = array( 'hide_empty=0' );
+
+                                                $terms = get_terms( 'size', $args );
+                                                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+                                                    $count = count( $terms );
+                                                    $i = 0;
+                                                    $term_list = '';
+                                                    foreach ( $terms as $term ) {
+                                                        $i++;
+                                                        $term_list .= '<option value="' . $term->name . '">'. $term->name .'</option>';
+                                                        if ( $count != $i ) {
+                                                            $term_list .= '';
+                                                        }
+                                                        else {
+                                                            $term_list .= '';
+                                                        }
+                                                    }
+                                                    echo $term_list;
+                                                }
+                                            ?>
                                         </select>
                                     </p>
 
@@ -82,15 +121,23 @@
                                 <div id="about" class="nano">
                                     <div class="nano-content">
                                         <ul class="list-ul">
+                                            <?php
+                                                $args = array(
+                                                    'post_type' => 'projects'
+                                                );
+                                                $pr = new wp_query($args);
+                                                while($pr->have_posts()): $pr->the_post();
+                                            ?>
                                             <li>
-                                                <a href="#">
+                                                <a href="<?php the_permalink(); ?>">
                                                     <div>
-                                                        <img src="#" alt="" />
-                                                        <p></p>
-                                                        <span></span>
+                                                        <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>" alt="" />
+                                                        <p><?php the_title(); ?></p>
+                                                        <span><?php echo get_post_meta(get_the_ID(),'_themeaxe_group_location',false)[0]; ?></span>
                                                     </div>
                                                 </a>
                                             </li>
+                                            <?php endwhile; wp_reset_query(); ?>
                                         </ul>
 
                                     </div>

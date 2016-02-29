@@ -45,36 +45,6 @@
                     <div class="col-md-5 col-sm-6 col-xs-7 remove-padding"></div>
                     <div class="col-md-7 col-sm-6 col-xs-5 remove-padding height100">
                         <div class="spec-project-tab">
-                            <ul class="spec-project-tab-ul">
-                                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding">
-                                    <a href="#">
-                                        <i class="sprite sprite-camera display-block"></i>
-                                        <i class="sprite sprite-hover-camera display-none"></i>
-                                        <span>gallery</span>
-                                    </a>
-                                </li>
-                                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding">
-                                    <a href="#">
-                                        <i class="sprite sprite-floor-map display-block"></i>
-                                        <i class="sprite sprite-hover-floor-map display-none"></i>
-                                        <span>floor plans</span>
-                                    </a>
-                                </li>
-                                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding">
-                                    <a href="specification.php">
-                                        <i class="sprite sprite-spec display-block"></i>
-                                        <i class="sprite sprite-hover-spec display-none"></i>
-                                        <span>specification</span>
-                                    </a>
-                                </li>
-                                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding">
-                                    <a href="#">
-                                        <i class="sprite sprite-at-a-glance display-block"></i>
-                                        <i class="sprite sprite-hover-at-a-glance display-none"></i>
-                                        <span>at a glance</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
