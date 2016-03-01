@@ -1,0 +1,23 @@
+#tab-nav {
+    height: 32px;
+}
+
+.nav-tab {
+    background: #ebebeb none repeat scroll 0 0;
+    border: 1px solid #e5e5e5;
+    box-sizing: content-box;
+    color: #777777;
+    cursor: pointer;
+    float: left;
+    font: 13px/19px "Open Sans", sans-serif;
+    height: 20px;
+    margin: 0 2px 0 0;
+    padding: 7px 15px 7px;
+    position: relative;
+    top: 1px;
+}
+
+.ui-tabs-active .nav-tab {
+    background-color: #333;
+    color: #fff;
+}

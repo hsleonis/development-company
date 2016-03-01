@@ -15,7 +15,7 @@ function themeaxe_register_metabox() {
 		'id'           => $prefix . 'projects_meta',
 		'title'        => __( 'Project options', 'cmb2' ),
 		'object_types' => array( 'projects', ),
-		'context'      => 'side',
+		'context'      => 'normal',
 		'priority'     => 'high',
 	) );
     
@@ -263,4 +263,18 @@ function themeaxe_register_theme_options_metabox() {
 		'default' => '#222D3A',
 	) );
 
+}
+
+add_action( 'admin_enqueue_scripts', 'tmx_prefix_admin_scripts' , 10, 4 );
+function tmx_prefix_admin_scripts ($hook) {
+    if('post-new.php'!=$hook && 'post.php'!=$hook) return;
+    //if(!isset($_GET['post_type']) || $_GET['post_type']!='projects') return;
+    $screen = get_current_screen();
+    $post_type = $screen->id;
+    if ($post_type != 'projects') return;
+    
+    wp_enqueue_script('jquery-ui-tabs');
+    wp_enqueue_script('tabs', get_template_directory_uri().'/resources/js/tab.js', array('jquery','jquery-ui-tabs'), null, true);
+    
+    wp_enqueue_style('admin-css', get_template_directory_uri().'/resources/css/admin.css' );
 }

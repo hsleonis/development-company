@@ -8,20 +8,21 @@
 	   		<div class="col-md-5 col-sm-6 col-xs-7 remove-padding height100 spec-left-wrapper page-wrapper">
 
 	   			<!-- project detail -->
-	   			<div class="spec-project-detail tab-content">
+	   			<div class="spec-page-detail">
 	   				<div class="spec-project-nav">
 	   					<h3><?php the_title(); ?></h3>
 	   				</div>
-	   				<div id="a-glance" class="spec-info tab-pane fade in active">
+	   				<div id="a-glance" class="spec-page-info">
 	   					<?php the_content(); ?>
 	   				</div>
 	   			</div>
 	   			<!-- end of project detail -->
 	   		</div>
-	   		<div class="col-md-7 col-sm-6 col-xs-5 remove-padding height100 spec-right-wrapper">
+	   		<div class="col-md-7 col-sm-6 col-xs-5 remove-padding height100 spec-right-wrapper" style="background-image:url('<?php ?>')">
 	   			<div class="spec-project-tab">
 	   			</div>
 	   		</div>
+            <div class="thumb-full" style="width: 57%;background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>');"></div>
 	   </div>
         <?php endwhile; ?>
 	</div>

@@ -35,7 +35,7 @@
         <div class="col-md-7 col-sm-6 col-xs-5 remove-padding height100 spec-right-wrapper">
         <div class="spec-project-tab">
             <ul class="spec-project-tab-ul nav nav-tabs">
-                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding spec-btn active">
+                <li class="col-md-3 col-sm-6 col-xs-12 remove-padding spec-btn active">
                     <a href="#a-glance" data-toggle="tab">
                         <i class="sprite sprite-at-a-glance display-block"></i>
                         <i class="sprite sprite-hover-at-a-glance display-none"></i>
@@ -43,7 +43,7 @@
                     </a>
                 </li>
                 <?php if(get_post_meta(get_the_ID(),'_themeaxe_group_specification',false)[0]): ?>
-                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding glance-btn">
+                <li class="col-md-3 col-sm-6 col-xs-12 remove-padding glance-btn">
                     <a href="#specification" data-toggle="tab">
                         <i class="sprite sprite-spec display-block"></i>
                         <i class="sprite sprite-hover-spec display-none"></i>
@@ -52,7 +52,7 @@
                 </li>
                 <?php endif; ?>
                 <?php if(count($floor)>0): ?>
-                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding plan-btn">
+                <li class="col-md-3 col-sm-6 col-xs-12 remove-padding plan-btn">
                     <a href="#">
                         <i class="sprite sprite-floor-map display-block"></i>
                         <i class="sprite sprite-hover-floor-map display-none"></i>
@@ -61,7 +61,7 @@
                 </li>
                 <?php endif; ?>
                 <?php if(count($gallery)>0): ?>
-                <li class="col-md-3 col-sm-12 col-xs-12 remove-padding gallery-btn">
+                <li class="col-md-3 col-sm-6 col-xs-12 remove-padding gallery-btn">
                     <a href="#">
                         <i class="sprite sprite-camera display-block"></i>
                         <i class="sprite sprite-hover-camera display-none"></i>
@@ -107,10 +107,10 @@
                 if(count($gallery)>0)
                 foreach($gallery as $item):
           ?>
-            <div class="col-md-6" data-src="<?php echo $item['image']; ?>">
+            <div class="col-md-6">
                 <h4><?php echo $item['title']; ?></h4>
                 <p><?php echo $item['description']; ?></p>
-                <a href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
+                <a data-src="<?php echo $item['image']; ?>" href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
                 <img src="<?php echo $item['image']; ?>">
             </div>
           <?php endforeach; ?>
@@ -122,10 +122,10 @@
                 if(count($floor)>0)
                 foreach($floor as $item):
           ?>
-            <div class="col-md-6" data-src="<?php echo $item['image']; ?>">
+            <div class="col-md-6">
                 <h4><?php echo $item['title']; ?></h4>
                 <p><?php echo $item['description']; ?></p>
-                <a href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
+                <a data-src="<?php echo $item['image']; ?>" href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
                 <img src="<?php echo $item['image']; ?>">
             </div>
           <?php endforeach; ?>
