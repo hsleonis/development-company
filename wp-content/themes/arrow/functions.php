@@ -46,3 +46,52 @@ function change_image_metabox(){
     remove_meta_box( 'postimagediv', 'projects', 'side' );
     add_meta_box('postimagediv', __('Featured Image'), 'post_thumbnail_meta_box', 'projects', 'side', 'high');
 }
+
+add_action("login_head", "tmx_login_head");
+function tmx_login_head() {
+	echo "
+	<style>
+    @font-face {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Raleway'), url(https://fonts.gstatic.com/s/raleway/v9/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+    }
+    html,body{
+        background-color: #1F2933;
+        color: #FFF;
+        font-family: 'Raleway';
+    }
+    .login form {
+        background: rgba(255, 255, 255, 0.01);
+    }
+	body.login #login h1 a {
+		background: url('".get_header_image()."') no-repeat scroll center top transparent;
+		height: ".get_custom_header()->height."px;
+        width: ".get_custom_header()->width."px;
+	}
+    .login form .input, .login form input[type=\"checkbox\"], .login input[type=\"text\"] {
+        background-color:#323D48;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: #FFF;
+    }
+    .wp-core-ui .button, .wp-core-ui .button-primary, .wp-core-ui .button-secondary {
+        border-radius: 0;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .login #login_error {
+        background-color: #4e3838;
+    }
+    .login .message {
+        background-color: #11313b;
+    }
+	</style>
+	";
+}
+
+// Change title for login screen
+add_filter('login_headertitle', create_function(false,"return get_bloginfo('title');"));
+
+// change url for login screen
+add_filter('login_headerurl', create_function(false,"return home_url();"));
