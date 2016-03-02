@@ -1,5 +1,10 @@
 (function () {
     'use strict';
+    /*console.profile('process');
+    console.time('Message');
+    console.table([{Project:"Doreen Development", Developer:"Md. Hasan Shahriar", CMS:"WordPress", Year:"2016"}]);
+    console.timeEnd('Message');
+    console.profileEnd('process');*/
 
     jQuery(document).ready(function ($) {
         function hidePanel(m) {
@@ -122,38 +127,28 @@
         $(document).on('click', '.glance-btn, .spec-btn', function () {
             $('.spec-project-tab-ul .active').removeClass('active');
             $('.specification-body-content').animate({
-                'opacity': '1'
+                'opacity': '1',
+                'z-index' : '2'
             }, 500, function () {
                 hidePanel('#project-gallery, #project-plan');
             });
         });
-        
-        /*$(document).on('change', '#searchCat', function(){
-            var $status = $('#searchCat').val();
-            if($status=='') return;
-            else {
-                console.log($("[data-status='"+$status+"']"));
-                $("[data-status='"+$status+"']").animate({
-                    'opacity': '1'
-                },500,function(){$(this).css({'display':'none'});});
-            }
-        });*/
 
         $('.gallery-slider').lightGallery({
             thumbnail: true,
             animateThumb: false,
             showThumbByDefault: false,
-            selector: '.col-md-6 a'
+            selector: '.col-md-6 .viewer'
         });
 
         $('.plan-slider').lightGallery({
             thumbnail: true,
             animateThumb: false,
             showThumbByDefault: false,
-            selector: '.col-md-6 a'
+            selector:'.col-md-6 .viewer'
         });
 
-        $('#a-glance, .nano-content').perfectScrollbar();
+        $('.spec-info, .spec-page-info').perfectScrollbar();
 
         $(window).load(function () {
             $('#loading').hide();

@@ -13,11 +13,25 @@ function themeaxe_register_metabox() {
 	$prefix = '_themeaxe_';
     $cmb_meta = new_cmb2_box( array(
 		'id'           => $prefix . 'projects_meta',
-		'title'        => __( 'Project options', 'cmb2' ),
+		'title'        => __( 'Settings', 'cmb2' ),
 		'object_types' => array( 'projects', ),
 		'context'      => 'normal',
 		'priority'     => 'high',
 	) );
+    
+    $cmb_meta->add_field( array(
+        'name'    => 'Background Color',
+        'id'      => $prefix . 'bgcolor',
+        'type'    => 'colorpicker',
+        'default' => '#222D3A',
+    ) );
+    
+    $cmb_meta->add_field( array(
+        'name'    => 'Font Color',
+        'id'      => $prefix . 'txtcolor',
+        'type'    => 'colorpicker',
+        'default' => '#476A7F',
+    ) );
     
     $cmb_meta->add_field( array(
         'name'             => __('Make project featured','themeaxe'),
@@ -74,7 +88,7 @@ function themeaxe_register_repeatable_group_field_metabox() {
     
     $cmb_about_page = new_cmb2_box( array(
 		'id'           => $prefix . 'extra',
-		'title'        => __( 'Project additional information', 'cmb2' ),
+		'title'        => __( 'Additional Info', 'cmb2' ),
 		'object_types' => array( 'projects', ),
 		'context'      => 'normal',
 		'priority'     => 'high',
@@ -96,7 +110,7 @@ function themeaxe_register_repeatable_group_field_metabox() {
     
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'gallery',
-		'title'        => __( 'Gallery Images', 'cmb2' ),
+		'title'        => __( 'Gallery', 'cmb2' ),
 		'object_types' => array( 'projects', ),
 	) );
 
@@ -140,7 +154,7 @@ function themeaxe_register_repeatable_group_field_metabox() {
     
     $cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'floor',
-		'title'        => __( 'Floor plan Images', 'cmb2' ),
+		'title'        => __( 'Floor Plan', 'cmb2' ),
 		'object_types' => array( 'projects', ),
 	) );
 

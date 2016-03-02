@@ -1071,10 +1071,23 @@ select {
 
 /*===============Projects detail page======================*/
 
-#a-glance,
+.spec-page-info,
+.spec-info,
 .nano-content {
     height: 350px;
+    padding-right: 20px;
     position: relative;
+}
+.spec-info button,.spec-page-info button,
+.spec-info input,.spec-page-info input,
+.spec-info optgroup,.spec-page-info optgroup,
+.spec-info select,.spec-page-info select,
+.spec-info textarea,.spec-page-info textarea {
+    width: 270px;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 10px;
+    background: #4D5865;
+    color: #EEE;
 }
 .project-detail-body{
     position: absolute;

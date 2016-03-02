@@ -74,10 +74,10 @@
     </div>
     </div>
 	<div class="specification-body-content div-panel">
-	   	<div class="spec-left-bg"></div>
+	   	<div class="spec-left-bg" style="background-color: <?php echo get_post_meta(get_the_ID(),'_themeaxe_bgcolor',false)[0]; ?>;"></div>
         <div class="thumb-full" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); ?>');"></div>
 	   	<div class="container height100">
-	   		<div class="col-md-5 col-sm-6 col-xs-7 remove-padding height100 spec-left-wrapper">
+	   		<div class="col-md-5 col-sm-6 col-xs-7 remove-padding height100 spec-left-wrapper" style="background-color: <?php echo get_post_meta(get_the_ID(),'_themeaxe_bgcolor',false)[0]; ?>;">
 	   			<!-- spec project cat -->
 	   			<div class="padding-top-150">
 	   			</div>
@@ -90,10 +90,10 @@
                         <?php previous_post_link( '%link', '<i class="sprite sprite-left-arrow"></i>', TRUE, ' ', 'status' ); ?>
                         <?php next_post_link( '%link', '<i class="sprite sprite-right-arrow"></i>', TRUE, ' ', 'status' ); ?>
 	   				</div>
-	   				<div id="a-glance" class="spec-info tab-pane fade in active">
+	   				<div id="a-glance" class="spec-info tab-pane fade in active" style="color: <?php echo get_post_meta(get_the_ID(),'_themeaxe_txtcolor',false)[0]; ?>;">
 	   					<?php the_content(); ?>
 	   				</div>
-					<div id="specification" class="spec-info tab-pane fade">
+					<div id="specification" class="spec-info tab-pane fade" style="color: <?php echo get_post_meta(get_the_ID(),'_themeaxe_txtcolor',false)[0]; ?>;">
 						<?php echo get_post_meta(get_the_ID(),'_themeaxe_group_specification',false)[0]; ?>
 					</div>
 	   			</div>
@@ -110,7 +110,10 @@
             <div class="col-md-6">
                 <h4><?php echo $item['title']; ?></h4>
                 <p><?php echo $item['description']; ?></p>
-                <a data-src="<?php echo $item['image']; ?>" href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
+                <span class="viewer" data-src="<?php echo $item['image']; ?>">
+                    <img style="display:none;" src="<?php echo $item['image']; ?>">
+                    <i class="sprite sprite-maximize"></i>
+                </span>
                 <img src="<?php echo $item['image']; ?>">
             </div>
           <?php endforeach; ?>
@@ -125,7 +128,10 @@
             <div class="col-md-6">
                 <h4><?php echo $item['title']; ?></h4>
                 <p><?php echo $item['description']; ?></p>
-                <a data-src="<?php echo $item['image']; ?>" href="<?php echo $item['image']; ?>"><i class="sprite sprite-maximize"></i></a>
+                <span class="viewer" data-src="<?php echo $item['image']; ?>">
+                    <img style="display:none;" src="<?php echo $item['image']; ?>">
+                    <i class="sprite sprite-maximize"></i>
+                </span>
                 <img src="<?php echo $item['image']; ?>">
             </div>
           <?php endforeach; ?>
