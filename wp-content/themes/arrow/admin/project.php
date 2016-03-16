@@ -36,7 +36,7 @@ function project_themeaxe() {
 		'description'           => __( 'Projects Information', 'themeaxe' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', ),
-		'taxonomies'            => array( 'status' ),
+		'taxonomies'            => array( 'status', 'city', 'size' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

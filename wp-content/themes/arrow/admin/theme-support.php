@@ -8,7 +8,7 @@
         add_theme_support( 'automatic-feed-links' );
 
         // Add theme support for Featured Images
-        add_theme_support( 'post-thumbnails', array( 'post', 'page', 'projects' ) );
+        add_theme_support( 'post-thumbnails', array( 'post', 'page', 'projects', 'news', 'career' ) );
 
         // Add theme support for Custom Header
         $header_args = array(
