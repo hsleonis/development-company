@@ -663,10 +663,13 @@ select {
 }
 .main-slider .slick-arrow{
 }
+.slider-project-location {
+    color: #D5D5D5;
+}
 .main-slider-nav{
     width: 62px;
     position: absolute;
-    top: 30px;
+    top: 50px;
     right: 0px;
 }
 .main-slider-nav a{
@@ -1228,6 +1231,19 @@ select {
     font-size: 11px;
     bottom: 50px;
     right: 30px;
+}
+.sprite-maximize{
+    cursor: pointer;
+    box-shadow: 0 0 30px 10px rgba(14, 17, 50, 0.3);
+    background-color: rgba(0,0,0,0.3);
+}
+.times-icon {
+    background-image: url('../img/times-icon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 32px;
+    width: 32px
 }
 .gallery-slider .sprite-maximize,
 .plan-slider .sprite-maximize,

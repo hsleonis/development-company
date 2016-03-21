@@ -13,7 +13,7 @@
                 <div class="project-detail-left">
                     <h1><?php echo count($post); ?></h1>
                     <p>
-                        <?php echo get_query_var('term'); ?>
+                        <?php post_type_archive_title(); ?>
                         <span></span>
                     </p>
                 </div>

@@ -1,5 +1,6 @@
 <?php
     require('career.php');
+    require('customizr.php');
     require('enqueue.php');
     require('theme-support.php');
     require('nav.php');

@@ -1,3 +1,9 @@
+/*
+ Controllers v1.0.2
+ (c) 2016 MD. Hasan Shahriar, hsleonis2@gmail.com
+ License: GPL v3
+*/
+
 var app = angular.module('leo', []).run(function ($templateCache, $http) {
 });
 

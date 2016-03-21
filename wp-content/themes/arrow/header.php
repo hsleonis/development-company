@@ -89,19 +89,19 @@
 
                                         <!-- right-side-social -->
                                         <ul class="menu-content-social-ul">
-                                            <li><a href="#">
+                                            <li><a href="<?php echo get_theme_mod( 'yt_txt_link', '#' ); ?>">
                                                 <i class="sprite sprite-yt display-block"></i><i class="sprite sprite-hover-yt display-none"></i></a>
                                             </li>
 
-                                            <li><a href="#">
+                                            <li><a href="<?php echo get_theme_mod( 'gp_txt_link', '#' ); ?>">
                                                 <i class="sprite sprite-gp display-block"></i><i class="sprite sprite-hover-gp display-none"></i></a>
                                             </li>
 
-                                            <li><a href="#">
+                                            <li><a href="<?php echo get_theme_mod( 'tw_txt_link', '#' ); ?>">
                                                 <i class="sprite sprite-tw display-block"></i><i class="sprite sprite-hover-tw display-none"></i></a>
                                             </li>
 
-                                            <li><a href="#">
+                                            <li><a href="<?php echo get_theme_mod( 'fb_txt_link', '#' ); ?>">
                                                 <i class="sprite sprite-fb display-block"></i><i class="sprite sprite-hover-fb display-none"></i></a>
                                             </li>
                                         </ul>

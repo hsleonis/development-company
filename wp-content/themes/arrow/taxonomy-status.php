@@ -40,7 +40,7 @@
                                 <div class="project-list-img" style="background-image:url('<?php the_post_thumbnail_url(); ?>');">
                                 </div>
                                 <h4><?php the_title(); ?></h4>
-                                <p>Address</p>
+                                <p><?php echo get_post_meta(get_the_ID(),'_themeaxe_group_location',false)[0]; ?></p>
                             </a>
                         </div>
                         <?php

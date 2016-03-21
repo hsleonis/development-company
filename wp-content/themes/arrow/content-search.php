@@ -32,7 +32,7 @@ print_r(json_encode($arr));
                         </h3>
 
                         <a class="search-button-add" href="#">
-                            <i class="sprite sprite-search"></i>
+                            <i class="sprite times-icon"></i>
                         </a>
 
                         <div style="clear:both"></div>
