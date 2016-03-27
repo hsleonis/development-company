@@ -303,7 +303,7 @@ body{
     position: relative;
     z-index: 999;
     display: none;
-    background-color: rgba(34, 45, 58, 0.95);
+    background-color: transparent;
 }
 .main-menu-content-bg{
     background: #000;
@@ -1272,6 +1272,27 @@ select {
 /*===============End of gallery page=================*/
 
 
+/*=---------------------------------------------
+                Style Change
+--------------------------------------------=*/
+.main-slider-prev:hover,
+.main-slider-next:hover{background-color: #000}
+
+#menu-bg{
+    position: relative;
+    z-index: 999;
+    background-color:rgba(34, 45, 58, 0.95); 
+}
+
+.slick-slide:hover .project-list-img{
+    outline: solid 1px #ffffff; 
+    outline-offset: -1px;
+}
+
+.slick-slide:hover h4{color: #FDE081}
+
+.list-ul{margin-left: -35px}
+
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -1444,6 +1465,9 @@ select {
         padding-top: 68px;
     }
 
+    #search-form p:nth-child(n+2){
+        display: none;
+    }
 
     /*End of project-detail page*/
 
@@ -1455,9 +1479,7 @@ select {
     .main-menu-content{
         display: none;
     }
-    #search-form p:nth-child(n+2){
-        display: none;
-    }
+    
     #search-form p:last-child{
         display: block;
     }
